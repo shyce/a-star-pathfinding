@@ -1,0 +1,15 @@
+.git
+.gitignore
+.dockerignore
+.claude
+.vscode
+node_modules
+compose.yml
+compose.royer.yml
+compose.prod.yml
+Dockerfile
+Dockerfile.prod
+README.md
+sandbox.config.json
+jsconfig.json
+package.json

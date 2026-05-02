@@ -1,0 +1,22 @@
+# a-star-pathfinding — PROD stack
+#
+# Static p5.js sketch served from nginx with files baked into the image.
+# Royer.app's launcher layers compose.royer.yml on top to set the entrypoint
+# label and strip the host port binding.
+#
+# Build:  docker compose -f compose.prod.yml build
+# Run:    docker compose -f compose.prod.yml up -d
+# Open:   http://localhost:8080
+
+name: a-star-pathfinding-prod
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    image: a-star-pathfinding/web:prod
+    container_name: a-star-pathfinding-web
+    restart: unless-stopped
+    ports:
+      - "8080:80"

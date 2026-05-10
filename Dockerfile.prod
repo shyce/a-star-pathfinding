@@ -3,7 +3,7 @@
 # Production: bake the static p5.js sketch into the image so the running
 # container has no host-mount dependency.
 
-FROM nginx:alpine-slim
+FROM nginx:1.29.2-alpine-slim
 
 COPY . /usr/share/nginx/html
 
